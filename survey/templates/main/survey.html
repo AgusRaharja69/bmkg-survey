@@ -77,7 +77,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-md-7 text-center" data-aos="fade">
           <h2 class="text-center text-white"><b>INDEKS KEPUASAN MASYARAKAT</b></h2>
-          <span class="caption d-block text-white">{{generate_link.code}}</span>
+          <h2 class="text-center text-white"><b>{{wilayah}}</b></h2>
         </div>
       </div>
     </div>  
@@ -93,19 +93,20 @@
                       <h2 class="text-center">DATA KORESPONDEN</h2>
                     </div>
                 </div>
+                {% csrf_token %}
                 <div class="row">
                     <div class="col-md-6 text-left mb-5">
                       <div class="p-3">
                           <div class="row form-group">
                               <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="font-weight-bold" for="fullname">Nama<span class="text-danger">*</span></label>
-                                <input type="text" id="fullname" class="form-control" placeholder="Nama">
+                                <input type="text" id="fullname" class="form-control" placeholder="Nama" name="name">
                               </div>
                           </div>
                           <div class="row form-group">
                               <div class="col-md-12">
                                 <label class="font-weight-bold" for="email">NIP<span class="text-danger">*</span></label>
-                                <input type="number" id="NIP" class="form-control" placeholder="Nomor Induk Penduduk">
+                                <input type="number" id="NIP" class="form-control" placeholder="Nomor Induk Penduduk" name="NIP">
                               </div>
                           </div>                        
                       </div>
@@ -115,7 +116,7 @@
                           <div class="row form-group">
                               <div class="col-md-12 mb-3 mb-md-0">
                                 <label class="font-weight-bold" for="sex">Jenis Kelamin<span class="text-danger">*</span></label>
-                                <select class="form-control" id="sex"> 
+                                <select class="form-control" id="sex" name="sex"> 
                                   <option value="" disabled selected hidden>Jenis Kelamin</option>                                   
                                   <option value="1">Laki-laki</option>
                                   <option value="2">Perempuan</option>
@@ -125,7 +126,7 @@
                             <div class="row form-group">
                               <div class="col-md-12">
                                 <label class="font-weight-bold" for="age">Umur<span class="text-danger">*</span></label>
-                                <input type="number" id="age" class="form-control" placeholder="Umur">
+                                <input type="number" id="age" class="form-control" placeholder="Umur" name="age">
                               </div>
                             </div>                           
                       </div>
