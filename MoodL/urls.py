@@ -9,7 +9,7 @@ from survey.views import logout_view, survey, login
 urlpatterns = [    
     path('admin/', admin.site.urls),
     path('', include('survey.urls')),
-    path('survey/(?P<link1>\d)/', survey, name='survey'),
+    path('survey/(?P<link1>\d)/(?P<date_link>/', survey, name='survey'),
     path('login/', login, name='login'),
     #path('logout/', logout_view, name='logout'),
 
